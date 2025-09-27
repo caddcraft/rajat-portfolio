@@ -8,7 +8,7 @@ import { FaHtml5 } from "react-icons/fa6";
 
 const App = () => {
   const handleView = () => {
-    window.open('public/file/rajat.pdf', '_blank');
+    window.open('./src/assets/file/rajat.pdf', '_blank');
   };
 
   return (
@@ -22,7 +22,7 @@ const App = () => {
    <p className='mt-4 text-lg md:text-xl'>"Hi I'm Rajat — A Frontend Developer"</p>
  <div className="flex flex-col sm:flex-row gap-4 mt-6">
 <button onClick={handleView}className="bg-cyan-500 hover:bg-green-600 text-white font-semibold py-2 transition transform hover:-translate-y-1  px-4 rounded ">View PDF </button>
-    <a href="public/file/rajat.pdf" download className="bg-slate-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded text-center">
+    <a href="src/assets/file/rajat.pdf" download className="bg-slate-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded text-center">
                 Download PDF</a></div>
      </div>
    <div className="w-60 h-60 md:w-80 md:h-80 border p-8 rounded-full mt-8 md:mt-0 transition transform hover:-translate-y-1"></div>
