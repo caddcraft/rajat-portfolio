@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React,{useState} from 'react';
 import Nav from './Component/Nav';
 import { FaPython } from "react-icons/fa";
 import { TbBrandJavascript } from "react-icons/tb";
@@ -10,7 +10,37 @@ const App = () => {
   const handleView = () => {
     window.open('./src/assets/file/rajat.pdf', '_blank');
   };
+const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    password: ''
+  });
 
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newErrors = {};
+    Object.keys(formData).forEach((key) => {
+      if (!formData[key]) {
+        newErrors[key] = `${key.charAt(0).toUpperCase() + key.slice(1)} is required`;
+      }
+    });
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setErrors({});
+    alert("Form submitted successfully!");
+  };
   return (
     <div className="bg-slate-800 min-h-screen text-white">
       <Nav/>
@@ -80,7 +110,19 @@ const App = () => {
           </div>
         </div>
       </section>
-      
+        <section id='contact' className="py-10 px-4 md:px-20">
+        <h2 className="text-2xl font-bold mb-6 text-center text-white">Required Form</h2>
+        <form onSubmit={handleSubmit} className="space-y-4 max-w-xl mx-auto bg-slate-700 p-6 rounded-lg">
+          {['name', 'email', 'phone', 'password'].map((field) => (
+            <div key={field}>
+              <label className="block text-sm font-medium text-white capitalize">{field}</label>
+      <input type={field === 'password' ? 'password' : field === 'email' ? 'email' : 'text'}name={field}value={formData[field]}
+        onChange={handleChange}className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 text-black"/>{errors[field] && <p className="text-red-500 text-sm">{errors[field]}</p>}
+            </div>
+          ))}
+          <button type="submit"className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded-md transition" >Submit</button>
+        </form>
+      </section>
     </div>
   );
 };

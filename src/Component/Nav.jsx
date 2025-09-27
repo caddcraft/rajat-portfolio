@@ -8,8 +8,8 @@ const Nav = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div className='bg-slate-700 text-white rounded-lg font-bold'>
-      <div className='h-12 flex items-center justify-between px-4 md:px-10'>
+    <div className='bg-slate-700 text-white  rounded-lg font-bold'>
+      <div className='h-12 flex items-center justify-around px-4 md:px-10'>
         <h1 className='text-xl'><a href="#nav" className='hover:text-cyan-400'>Portfolio</a></h1>
 
         <div className='md:hidden'>
