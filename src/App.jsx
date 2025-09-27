@@ -54,7 +54,7 @@ const App = () => {
    </div>
   <div className="flex-1 border p-4 rounded-lg transition transform hover:-translate-y-1">
        <p className='text-base md:text-lg  text-justify'>
-               Education lays the foundation by building knowledge and understand, while experience refines that knowledge through real-world practice. Education teaches the principles; experience brings them to life. While one happens in classrooms, the other happens in challenges. Together, they build confidence, skill, and long-term success. </p>
+               Education lays the foundation by building knowledge and understand, while experience refines that knowledge through real-world practice. Education teaches the principles; experience brings them to life. While one happens in classrooms, the other happens in challenges. Together, they build confidence, skill, and long-term success story. </p>
             </div>
           </div>
         </div>
