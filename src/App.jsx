@@ -61,7 +61,7 @@ const [formData, setFormData] = useState({
 <section id='about' className="py-10 px-4 md:px-20 transition transform hover:-translate-y-1">
         <div className="flex flex-col-reverse md:flex-row bg-slate-700 p-6 rounded-lg">
           <div className="w-full md:w-1/2 p-4 flex justify-center">
-            <div className="w-60 h-60 border transition transform hover:-translate-y-1"></div>
+            <div className="w-60 h-60 border transition transform hover:-translate-y-1 "></div>
           </div>
           <div className="w-full md:w-1/2 p-4 transition transform hover:-translate-y-1">
             <h1 className='text-2xl font-bold'>About <span className='text-cyan-400'>Me</span></h1>
